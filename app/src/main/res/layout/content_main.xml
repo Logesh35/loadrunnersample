@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:id="@+id/homePageFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+    </FrameLayout>
+
+    <!--This is the bottom navigation view xml-->
+    <include layout="@layout/activity_bottom_navigate"/>
+
+    <!--This is the floating filter button -->
+    <!--<include layout = "@layout/filter_button"/>-->
+</RelativeLayout>

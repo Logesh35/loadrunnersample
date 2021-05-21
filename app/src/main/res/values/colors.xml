@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorFB">#3b5998</color>
+    <color name="white">#ffffff</color>
+    <color name="colorGoogle">#d34836</color>
+    <color name="grey">#B3BCC1</color>
+    <color name="textColorGrey">#819595</color>
+    <color name="lightGrey">#dedfe0</color>
+    <color name="skyBlue">#2D8DD6</color>
+
+
+    <color name="bottomNavigationCheckedState">#F9F9FA</color>
+    <color name="bottomNavigationPressedState">#F9F9FA</color>
+    <color name="bottomNavigationEnabledState">#F9F9FA</color>
+    <color name="bottomNavigationIdealState">#B1BDBD</color>
+    <color name="bac">#4D5050</color>
+</resources>

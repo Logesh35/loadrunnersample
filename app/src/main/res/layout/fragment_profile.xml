@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/accountView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--This textview and the recycler view is responsible for top course section-->
+
+            <LinearLayout
+                android:id="@+id/accunt_layout"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/displayImageView"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_account_circle_black_24dp"
+                    app:civ_border_width="2dp"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:layout_below="@+id/displayImageView"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_16sdp" />
+
+                <Button
+                    android:id="@+id/tab_view"
+                    android:layout_below="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/square_bg"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="false"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Tab to view your profile"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_12sdp"
+
+                    />
+
+
+
+                <Button
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/edit_detils"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit profile"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_navy_blue_button"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:layout_below="@id/tab_view"
+                    android:layout_centerHorizontal="true"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/actionsCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_alignParentLeft="true"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardElevation="@dimen/_3sdp"
+                    app:cardUseCompatPadding="true"
+                    android:background="@color/white"
+                    android:layout_marginHorizontal="@dimen/_9sdp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_18sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:id="@+id/createProfileRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/borderless_relativelayout">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/createProfileIcon"
+                                android:layout_width="@dimen/_27sdp"
+                                android:layout_height="@dimen/_27sdp"
+                                android:src="@drawable/ic_account_circle_blue_24dp"
+                                android:layout_centerVertical="true" />
+                            <ImageView
+                                android:id="@+id/createProfileArrow"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:src="@drawable/icon_arrow_right_dark"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+                            <TextView
+                                android:id="@+id/createProfileTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:layout_toRightOf="@id/createProfileIcon"
+                                android:layout_toLeftOf="@id/createProfileArrow"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:text="Create an acccount"
+                                android:textSize="@dimen/_14sdp"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#D9DEE1"
+                            android:layout_marginBottom="@dimen/_3sdp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/changePasswordRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/borderless_relativelayout">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/changePasswordIcon"
+                                android:layout_width="@dimen/_27sdp"
+                                android:layout_height="@dimen/_27sdp"
+                                android:src="@drawable/ic_vpn_key_blue_24dp"
+                                android:layout_centerVertical="true" />
+                            <ImageView
+                                android:id="@+id/changePasswordArrow"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_arrow_right_dark"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+                            <TextView
+                                android:id="@+id/changePasswordTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:layout_toRightOf="@id/changePasswordIcon"
+                                android:layout_toLeftOf="@id/changePasswordArrow"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:text="Change password"
+                                android:textSize="@dimen/_14sdp"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#D9DEE1"
+                            android:layout_marginBottom="@dimen/_3sdp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/invitefrientRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/borderless_relativelayout">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/invitefrientIcon"
+                                android:layout_width="@dimen/_27sdp"
+                                android:layout_height="@dimen/_27sdp"
+                                android:src="@drawable/ic_share_black_24dp"
+                                android:layout_centerVertical="true" />
+                            <ImageView
+                                android:id="@+id/invitefriendarrow"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_arrow_right_dark"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+                            <TextView
+                                android:id="@+id/invitefriendTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:layout_toRightOf="@id/invitefrientIcon"
+                                android:layout_toLeftOf="@id/invitefriendarrow"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:text="Invite a friend"
+                                android:textSize="@dimen/_14sdp"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#D9DEE1"
+                            android:layout_marginBottom="@dimen/_3sdp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/helpRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/borderless_relativelayout">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/helpIcon"
+                                android:layout_width="@dimen/_27sdp"
+                                android:layout_height="@dimen/_27sdp"
+                                android:src="@drawable/ic_help_outline_black_24dp"
+                                android:layout_centerVertical="true" />
+                            <ImageView
+                                android:id="@+id/helparrow"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_arrow_right_dark"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+                            <TextView
+                                android:id="@+id/helpTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:layout_toRightOf="@id/helpIcon"
+                                android:layout_toLeftOf="@id/helparrow"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:text="Help and support"
+                                android:textSize="@dimen/_14sdp"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#D9DEE1"
+                            android:layout_marginBottom="@dimen/_3sdp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/logOutRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/borderless_relativelayout">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/logOutIcon"
+                                android:layout_width="@dimen/_27sdp"
+                                android:layout_height="@dimen/_27sdp"
+                                android:src="@drawable/ic_exit_to_app_black_24dp"
+                                android:layout_centerVertical="true" />
+                            <ImageView
+                                android:id="@+id/logOutArrow"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_arrow_right_dark"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+                            <TextView
+                                android:id="@+id/logOutTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:layout_toRightOf="@id/logOutIcon"
+                                android:layout_toLeftOf="@id/logOutArrow"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:text="Log out"
+                                android:textSize="@dimen/_14sdp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
